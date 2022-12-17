@@ -3,7 +3,7 @@ const router = require('express').Router()
 router.get('/', (req, res) => {
     let places = [{
         place: 'La Parguera',
-        picture: 'https://unsplash.com/photos/wCtquP4WQ8U',
+        picture: '/images/beautiful-water-islands.jpg',
         country: 'United States',
         city: 'Lajas',
         state: 'Puerto Rico',
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         musts: 'You have to go swimming in this beautiful water!'
     }, {
         place: 'The Oceanfront',
-        picture: '',
+        picture: '/images/thinking-statue.jpg',
         country: 'United States',
         city: 'Virginia Beach',
         state: 'Virginia',
