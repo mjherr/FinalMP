@@ -27,7 +27,8 @@ router.get('/new', (req, res) => {
 
 //New
 router.post('/', (req, res) => {
-    res.render('/places')
+    console.log(req.body)
+    res.send('POST/places')
 })
 
   
