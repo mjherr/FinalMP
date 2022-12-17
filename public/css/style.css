@@ -3,6 +3,26 @@ h1 {
     color: cornflowerblue;
   }
 
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+  }
+
+  nav li {
+      display: inline;
+      margin-right: 25px;
+  }
+
+  nav a {
+      color: white;
+      font-size: 1.5em;
+  }
+
+  nav a:hover {
+      color: gray;
+      text-decoration: none;
+  }
+
   img {
     display: block;
     margin-left: auto;
