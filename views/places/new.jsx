@@ -18,7 +18,7 @@ function new_form (data) {
             <form method="POST" action="/places">
               <div className="row">
                 <div className="form-group col-sm-6">
-                  <label htmlFor="place">Place You Visited</label>
+                  <label htmlFor="place">¡HOLA! Create New Travel Entry</label>
                   <input className="form-control" id="place" name="place" required />
                 </div>
                 <div className="form-group col-sm-6">
@@ -44,7 +44,7 @@ function new_form (data) {
                 <label htmlFor="fave">Favorite Things</label>
                 <input className="form-control" id="fave" name="fave" required />
               </div>
-              <input className="btn btn-primary" type="submit" value="Add Place" />
+              <input className="btn btn-primary" type="submit" value="Create New Place" />
             </form>
           </main>
         </Def>

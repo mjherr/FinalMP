@@ -11,7 +11,8 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                <nav>
+                <nav className="navbar navbar-dark bg-dark">
+                
                     <ul>
                         <li>
                             <a href="/">Home</a>

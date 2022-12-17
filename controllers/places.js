@@ -1,24 +1,8 @@
 const router = require('express').Router()
-const places = require('../models/places.js')
+const db = require('../models')
+
 
 router.get('/', (req, res) => {
-    // let places = [{
-    //     place: 'La Parguera',
-    //     picture: '/images/beautiful-water-islands.jpg',
-    //     country: 'United States',
-    //     city: 'Lajas',
-    //     state: 'Puerto Rico',
-    //     date: 08/14/2022,
-    //     musts: 'You have to go swimming in this beautiful water!'
-    // }, {
-    //     place: 'The Oceanfront',
-    //     picture: '/images/thinking-statue.jpg',
-    //     country: 'United States',
-    //     city: 'Virginia Beach',
-    //     state: 'Virginia',
-    //     date: 06/18/2022,
-    //     musts: 'Take pictures with the huge Neptune statue!'
-    // }]
     res.render('places/index', { places })
 })
 
@@ -57,8 +41,8 @@ router.get('/:id', (req, res) => {
     }
   })
 
-  //Delete
-  router.delete('/:id', (req, res) => {
+//Delete
+router.delete('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
       res.render('error404')
@@ -71,7 +55,23 @@ router.get('/:id', (req, res) => {
       res.redirect('/places')
     }
   })
-  
-  
-  
+
+//Edit
+router.get('/:id/edit', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+      res.render('places/edit', { place: places[id] })
+    }
+  })
+
+router.put('/:id', (req, res) => {
+    res.render('PUT /places/:id')
+})
+    
 module.exports = router
